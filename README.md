@@ -1,14 +1,14 @@
 # Frontend Practice
 
-Welcome to the Frontend Practice repository! This is a place where you can practice and improve your frontend development skills.
+Welcome to the Frontend Practice repository! This is a place where I practice and improve my frontend development skills.
 
 ## What is this repository for?
 
-This repository is meant to be a playground for frontend developers who want to practice coding in HTML, CSS, and JavaScript. You can use this repository to:
+This repository is meant to be a playground for a frontend developer who wants to practice coding in HTML, CSS, and JavaScript. I'm using this repository to:
 
 - Practice building responsive web layouts
 - Experiment with different design patterns and frameworks
-- Work on small coding challenges to improve your skills
+- Work on small coding challenges to improve my skills
 
 ## How to use this repository
 
