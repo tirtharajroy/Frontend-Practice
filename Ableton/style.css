@@ -1,0 +1,355 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap');
+
+/* Generic Styling */
+* {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #FAF9F6;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+hr {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 4rem 0;
+}
+
+/* Utility Classes */
+
+.un_list {
+    list-style: none;
+}
+.li_inline li{
+    display: inline-block;
+}
+.clr-orange {
+    color: olivedrab;
+}
+.clr-blue {
+    color: blueviolet;
+}
+
+/* Miscellaneous */
+.margin-left-four {
+    margin-left: 4rem !important;
+}
+.toggle_select {
+    display: none;
+}
+
+/* Header */
+/* Nav bar */
+.logo {
+    height: 1.6em;
+    width: 3.6em;
+    margin: 0 1.2em;
+}
+.nav_bar {
+    display: flex;
+    align-items: center;
+    height: 3.6rem;
+    border-bottom: solid 1px rgba(47, 79, 79,0.4);
+    padding: 0 .4em;
+}
+.nav_bar li a {
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0 0.6rem;
+}
+.nav_one {
+    display: flex;
+    flex: 1;
+}
+.more_btn {
+    flex: 1;
+}
+
+/* Secondary Nav Bar */
+.nav_two {
+    height: 3rem;
+    padding: 0.8rem;
+}
+.nav_two li a{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0 0.8rem;
+}
+
+/* More Section */
+.more {
+    padding: 0 1.6rem 2rem;
+    display: none;
+}
+.more h2 {
+    margin: 1.2rem 0;
+}
+.more-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+.more-text-b {
+    font-weight: bold;
+    display: block;
+}
+
+/* Heading and Background */
+.hero {
+    background-image: url('./images/bg1.jpg');
+    background-position-y: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 480px;
+    margin: 0 10%;
+    justify-content: center;
+}
+.heading {
+    color: #E32636;
+    align-self: center;
+    font-size: 4.8em;
+    background: transparent;
+    opacity: 90%;
+}
+
+/* Text Block */
+.textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10% 20%;
+}
+.textblock > * + * {
+    margin-top: 1.4em;
+}
+.para_bg, .textblock  a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+.para_sm {
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+/* Styling Pic combination 1 */
+.pics-one {
+    display: flex;
+    height: 600px;
+}
+.pics-one img{
+    height: 275px;
+    width: 375px;
+}
+.left{
+    flex:2;
+    position: relative;
+}
+.left img {
+    position: absolute;
+    transform: scale(1.55);
+    top: 9.5em;
+    left: 9.5em;
+}
+.right {
+    flex:3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFEA7;
+}
+
+/* Styling the video */
+.video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20%;
+}
+.video iframe {
+    height: 20rem;
+}
+.video p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-top: 0.1rem;
+}
+
+/* Styling Pic combination 2 */
+.pics-two {
+    display: flex;
+    height: 800px;
+}
+.pics-two img{
+    height: 280px;
+    width: 350px;
+}
+.left_two {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FAFEA7;
+}
+.right_two {
+    flex: 2;
+    position: relative;
+}
+.right_two img {
+    position: absolute;
+    transform: scale(1.5);
+    top: 14rem;
+}
+
+/* Jobs Section */
+.jobs {
+    display: flex;
+    justify-content: center;
+    margin: 0 10%;
+}
+.jobs div, .jobs img {
+    width: 50%;
+
+}
+.jobs div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.jobs p {
+    padding: 3rem 3rem 0 3rem;
+}
+.jobs div, .jobs p, .jobs a {
+    background-color: #B1C4FE;
+}
+
+/* Grid Boxes */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(550px,1fr));
+    gap: 20px;
+    margin: 0 4rem;
+}
+.card {
+    width: fit-content;
+}
+.card img {
+    width: 20rem;
+    padding-bottom: 0.4rem;
+}
+.card p {
+    padding-top: 0.4rem;
+    font-size: 0.9rem;
+}
+
+/* Footer Heading */
+.footer-head {
+    margin: 4rem;
+    font-size: 2.2em;
+}
+/* Footer Styling */
+.ft-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    margin: 0 4rem;
+    gap: 1.2rem;
+}
+.ft-main-items * + *{
+    margin-top: 0.2rem;
+}
+input[type="email"] {
+    border: 0;
+    padding: 0.6rem;
+    background-color: #EFEEEF;
+    margin-top: 0.4rem;
+}
+input[type="email"]:focus {
+    outline: 1px solid hotpink;
+}
+input[type="submit"] {
+    border: 0;
+    padding: 0.6rem; 
+    color: #ffffff;
+    cursor: pointer;
+    background-color: blueviolet;
+    margin-top: 0.4rem;
+}
+.ft-social-items {
+    display: flex;
+    align-items: center;
+}
+.ft-social-item:nth-child(1) {
+    padding-left: 0 !important;
+}
+.ft-social-item {
+    padding: 0.4rem;
+    transform: scale(1.2);
+}
+.ft-legal-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 4rem;
+}
+.ft-legal-item a {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.ft-legal-items * + * {
+    padding-left: 0.6rem;
+}
+.ft-legal-items li:nth-last-child(3) {
+    flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 747px) {
+    .pics-one,.jobs,.pics-two, .login_btn, .live_btn {
+        display: none !important;
+    }
+    .ft-legal-items {
+        flex-direction: column;
+    }
+    .ft-legal-item {
+        padding: .2rem !important;
+    }
+    .more_btn a{
+        display: none;
+    }
+    .nav_bar {
+        height: min-content;
+    }
+    .nav_bar img {
+        margin: 1.2rem 0;
+    }
+    .nav_one {
+        flex-direction: column;
+        display: none;
+    }
+    .nav_bar li {
+        padding: 0.2rem;
+    }
+    .heading {
+        font-size: 2.8em;
+    }
+    .toggle_select {
+        display: inline-block;
+        transform:scale(1.5);
+        margin:0 0 0 auto;
+    }
+    .card {
+        margin: 0 auto 0 1.8rem;
+    }
+    .margin-left-four {
+        margin-left: 1.8rem !important;
+    }
+}

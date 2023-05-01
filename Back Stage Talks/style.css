@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+/* Universal */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+li {
+    list-style-type: none;
+}
+
+/* Header */
+.heading {
+    position: fixed;
+    left: 0;
+    margin: 1em;
+    text-transform: uppercase;
+}
+.header_mail {
+    position: fixed;
+    right: 0;
+    margin: 1.8em;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer_section{
+    position: fixed;
+    bottom: 0;
+    margin: 1.2em;
+    font-size: 1.2em;
+}
+.footer_left {
+    left: 0;
+    width: 20em;
+    font-weight: bold;
+}
+.footer_right {
+    right: 0;
+}
+.footer_left_second {
+    margin-top: 0.2em;
+    font-size: 1em;
+    font-weight: normal;
+}
+.footer_right a {
+    font-weight: normal;
+}
+/* Images */
+.issue_main img {
+    width: 450px;
+}
+.issue_main {
+    text-align: center;
+    height: 100vh;
+    padding-top: 2em;
+}
+.issue_main p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.issue_one {
+    background-color: #FAF9F6;
+}
+.issue_two {
+    background-color: #00c1b5;
+}
+.issue_three {
+    background-color: #ff651a;
+}
+.issue_four {
+    background-color: #ffbe00;
+}
+.issue_five {
+    background-color: #1d3fbb;
+}
+.issue_six {
+    background-color: #e30512;
+}
+
+/* Scroll Snapping */
+.issue_main {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width:1200px) {
+    .heading, .header_mail, .footer_section {
+        all: unset;
+        display: block;
+        scroll-snap-align: start;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .issue_main img {
+        width: 30em;
+        margin: 7em auto;
+    }
+    .heading, .header_mail {
+        background-color: #FAF9F6;
+        padding-top: .5em;
+    }
+    .issue_main {
+        scroll-snap-align: center;
+    }
+    .footer_section {
+        background-color: #e30512;
+        color: #FAF9F6;
+        padding-bottom: 0.6em;
+    }
+    .footer_section a {
+        color: #FAF9F6;
+    }
+    .footer_right {
+        display: none;
+    }
+}
