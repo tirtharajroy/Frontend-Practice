@@ -20,6 +20,11 @@ hr {
     margin: 4rem 0;
 }
 
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* Utility Classes */
 
 .un_list {
