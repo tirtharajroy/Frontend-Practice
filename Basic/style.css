@@ -2,10 +2,13 @@
 .clr-fff {
     color: black;
 }
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
 }
-
+hr {
+    background-color: rgba(46, 44, 44, 0.3);
+    height: 2px;
+}
 /* Styling Header */
 header {
     
@@ -14,7 +17,7 @@ header {
     text-align: center;
     height: 100vh;
 }
-video {
+.header-bg-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,4 +90,95 @@ video {
     place-items: center;
     font-size: 8rem;
     padding: 0 15px;
+}
+.points {
+    display: flex;
+    justify-content: space-between;
+}
+.points p, .points i {
+    font-size: 0.8rem;
+}
+.cards-hz {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 40px;
+}
+.brand-card {
+    display: inline-block;
+    flex: 33.333% 0 0;
+    padding: 0 5% 0 0;
+}
+.brand-card p {
+    font-size: 0.8rem;
+}
+.brand-logo {
+    height: 60px;
+    padding-bottom: 25px;
+}
+.cards-hz::-webkit-scrollbar {
+    height: 2px;
+    background-color: rgba(177, 221, 210, 0.8);
+}
+.cards-hz::-webkit-scrollbar-thumb {
+    background-color: rgb(35, 48, 45);
+}
+
+.chg-bg {
+    display: flex;
+    min-height: 650px;
+    align-items: center;
+}
+.chg-bg-video {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.chg-bg video {
+    height: 100%;
+    
+}
+.chg-bg-text {
+    width: 50%;
+    padding: 0 5%;
+}
+.chg-bg h1 {
+    font-size: 3.4rem;
+}
+body.chg-bg-active {
+    background-color: rgb(58, 47, 47);
+    transition: background-color 1s ease;
+}
+.chg-bg-active h1, .chg-bg-active p, .chg-bg-active .feat-2 {
+    color: antiquewhite;
+}
+.feat {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.news-img {
+    width: 250px;
+}
+.news-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 2.5%;
+    border-top: 1px solid rgba(32, 39, 37, 0.8);
+    margin-top: 2.5%;
+}
+.news-card i{
+    padding: 2.5%;
+}
+
+.ft-main {
+    background-color: darkslategray;
+}
+
+.ft-legal {
+    background-color: black;
 }
