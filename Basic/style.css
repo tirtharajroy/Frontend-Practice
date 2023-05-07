@@ -175,10 +175,60 @@ body.chg-bg-active {
     padding: 2.5%;
 }
 
-.ft-main {
+footer {
     background-color: darkslategray;
+}
+.outro-text{
+    display: flex;
+}
+.outro-text h2{
+    width: 50%;
+    color: antiquewhite;
+}
+.outro-text p,.outro-text a {
+    color: antiquewhite;
+    font-size: 1.2rem;
+}
+.outro-links {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.outro-links div {
+    width: 40%;
+}
+.outro-links * {
+    color: antiquewhite;
+}
+.footer-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+footer ul {
+    padding: 0;
+}
+#email-id {
+    width: 80%;
+    padding: 25px 0;
+    border: 0;
+    border-bottom: 1px solid rgba(177, 221, 210, 0.8);
+    border-radius: 0%;
 }
 
 .ft-legal {
-    background-color: black;
+    background-color: rgb(19, 18, 18);
+}
+.ft-legal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ft-legal p, .ft-legal a {
+    color: antiquewhite;
+    opacity: 0.91;
+    font-size: 0.7rem;
+    padding: 2.5% 0 0;
 }

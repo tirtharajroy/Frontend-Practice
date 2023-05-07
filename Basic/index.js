@@ -1,3 +1,4 @@
+/* Slider Function
 var isDown = false;
 var startX;
 var scrollLeft;
@@ -25,7 +26,39 @@ slider.addEventListener('mousemove', function(e) {
     var x = e.pageX - slider.offsetLeft;
     var walk = (x - startX) * 3;
     slider.scrollLeft = scrollLeft - walk;
+});*/
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+const slider = document.querySelector('.cards-hz');
+
+slider.addEventListener('mousedown', function(e) {
+  isDown = true;
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
 });
+
+slider.addEventListener('mouseleave', function () {
+  isDown = false;
+});
+
+slider.addEventListener('mouseup', function () {
+  isDown = false;
+});
+
+slider.addEventListener('mousemove', function(e) {
+  if (!isDown) return;
+  e.preventDefault();
+  let x = e.pageX - slider.offsetLeft;
+  let walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+
+
+/* Change Background
 // Get the chg-bg section element
 const chgBgSection = document.querySelector('.chg-bg p');
 
@@ -44,3 +77,18 @@ const observer = new IntersectionObserver(entries => {
 
 // Observe the chg-bg section element
 observer.observe(chgBgSection);
+*/
+
+const chgBg = document.querySelector('.chg-bg p');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.body.classList.add('chg-bg-active');
+    } else {
+      document.body.classList.remove('chg-bg-active');
+    }
+  });
+});
+
+observer.observe(chgBg);
+
