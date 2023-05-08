@@ -11,11 +11,11 @@ hr {
 }
 /* Styling Header */
 header {
-    
     position: relative;
     overflow: hidden;
     text-align: center;
     height: 100vh;
+    cursor: none;
 }
 .header-bg-video {
     position: absolute;
@@ -32,6 +32,7 @@ header {
     color: antiquewhite;
     font-size: 1.12rem;
 }
+
 
 /* Animation Attempt Towards Nav Underline
 .nav-list-items:hover {
@@ -100,7 +101,9 @@ header {
 }
 .cards-hz {
     overflow-x: scroll;
+    position: relative;
     overflow-y: hidden;
+    cursor: none;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -152,9 +155,10 @@ body.chg-bg-active {
     background-color: rgb(58, 47, 47);
     transition: background-color 1s ease;
 }
-.chg-bg-active h1, .chg-bg-active p, .chg-bg-active .feat-2 {
+.chg-bg-active h1, .chg-bg-active p, .chg-bg-active .feat-2, .chg-bg-active .news-card h2 {
     color: antiquewhite;
 }
+
 .feat {
     display: flex;
     justify-content: space-between;
@@ -231,4 +235,37 @@ footer ul {
     opacity: 0.91;
     font-size: 0.7rem;
     padding: 2.5% 0 0;
+}
+.mouse-circle {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 250, 243);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.mouse-circle p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 25% 15%;
+    color: black;
+}
+.drag-circle {
+    position: absolute;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(172, 161, 149);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.drag-circle p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgba(14, 13, 13,0.8);
+    padding-top: 35% ;
 }

@@ -92,3 +92,38 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(chgBg);
 
+let header = document.querySelector('header');
+let mouseCircle = document.querySelector('.mouse-circle');
+let defaultPosition = {
+  left: mouseCircle.style.left,
+  top: mouseCircle.style.top
+};
+
+header.addEventListener('mousemove', function(e) {
+  mouseCircle.style.left = e.pageX - mouseCircle.offsetWidth / 2 + 'px';
+  mouseCircle.style.top = e.pageY - mouseCircle.offsetHeight / 2 + 'px';
+});
+
+header.addEventListener('mouseleave', function() {
+  mouseCircle.style.transition = 'all 0.25s ease';
+  mouseCircle.style.left = defaultPosition.left;
+  mouseCircle.style.top = defaultPosition.top;
+});
+
+let card = document.querySelector('.cards-hz');
+let drag = document.querySelector('.drag-circle');
+let dragDefault = {
+  left: drag.style.left,
+  top: drag.style.top
+};
+
+card.addEventListener('mousemove', function(e) {
+  drag.style.left = e.pageX - drag.offsetWidth / 2 + 'px';
+  // drag.style.top = e.pageY - drag.offsetHeight / 2 + 'px';
+});
+
+card.addEventListener('mouseleave', function () {
+  drag.style.transition = 'all 0.25s ease';
+  drag.style.left = dragDefault.left; 
+  drag.style.top =  dragDefault.top;
+});
