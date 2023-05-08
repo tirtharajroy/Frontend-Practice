@@ -14,7 +14,7 @@ header {
     position: relative;
     overflow: hidden;
     text-align: center;
-    height: 100vh;
+    height: clamp(65vh, 25vh + 5vw, 100vh);
     cursor: none;
 }
 .header-bg-video {
@@ -32,7 +32,11 @@ header {
     color: antiquewhite;
     font-size: 1.12rem;
 }
-
+.grid article img:hover, .grid article video:hover, .news-card img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    transition: all 0.2s ease;
+}
 
 /* Animation Attempt Towards Nav Underline
 .nav-list-items:hover {
@@ -83,14 +87,14 @@ header {
     width: 50%;
 }
 .intro-text p {
-    font-size: 1.36rem;
-    text-align: justify;
+    font-size: clamp(0.5rem,0.8rem + 1vw, 1.4rem);
 }
 .intro-text h1 {
     display: grid;
     place-items: center;
-    font-size: 8rem;
-    padding: 0 15px;
+    font-size: clamp(1.12rem,1.2rem + 10vw, 8rem);
+    padding: 0;
+    margin: 0;
 }
 .points {
     display: flex;
@@ -129,10 +133,21 @@ header {
 .cards-hz::-webkit-scrollbar-thumb {
     background-color: rgb(35, 48, 45);
 }
-
+.brand-card h5{
+    position: relative;
+}
+.brand-card h5::after {
+    content: "";
+    position: absolute;
+    bottom: 45px;
+    left: -0.5%;
+    min-width: 25px;
+    width: 15%;
+    height: 1.12px;
+    background-color: #1f1d1d;
+}
 .chg-bg {
     display: flex;
-    min-height: 650px;
     align-items: center;
 }
 .chg-bg-video {
@@ -142,14 +157,14 @@ header {
 }
 .chg-bg video {
     height: 100%;
-    
+    transform: translateX(-50%);
 }
 .chg-bg-text {
     width: 50%;
-    padding: 0 5%;
+    padding: 0 2.5%;
 }
 .chg-bg h1 {
-    font-size: 3.4rem;
+    font-size: clamp(1.2rem,1.2rem + 2vh, 6rem);   /*3.4rem*/
 }
 body.chg-bg-active {
     background-color: rgb(58, 47, 47);
@@ -268,4 +283,56 @@ footer ul {
     font-weight: bold;
     color: rgba(14, 13, 13,0.8);
     padding-top: 35% ;
+}
+
+@media (max-width:586px) {
+    .mouse-circle,.nav-links-two,.brand-card p ,.drag-circle,.fa-arrow-alt-circle-right,.footer-links {
+        display: none;
+    }
+    header {
+        cursor: auto;
+        height: clamp(25vh, 25vh + 5vw, 100vh);
+    }
+    .cards-hz {
+        cursor: auto;
+    }
+    .news-card,.outro-text, .outro-links, ul, .ft-legal,.chg-bg {
+        flex-direction: column;
+    }
+    .intro-text {
+        flex-direction: column-reverse;
+    }
+    .intro-text h1 {
+        padding: 0 0 10% 0;
+        margin: 0;
+    }
+    .chg-bg-video {
+        height: 350px;
+        padding: 5% 45%;
+    }
+    .chg-bg-text,.news-img,.chg-bg-video,.outro-links {
+        width: 100%;
+    }
+    #email-id,label {
+        width: 160%;
+    }
+    .chg-bg-active h5, .chg-bg-active h2 {
+        color: antiquewhite;
+    }
+    .chg-bg-active .brand-card h5::after {
+        background-color: antiquewhite;
+    }
+    .chg-bg-active img {
+        filter: invert(1);
+        -webkit-fliter: invert(1);
+    }
+    .intro-text div {
+        width: 100%;
+        padding: 0 10%;
+    }
+}
+@media (min-width:1244px) {
+    header {
+        height: 100vh;
+    }
 }
