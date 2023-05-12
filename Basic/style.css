@@ -15,7 +15,7 @@ header {
     overflow: hidden;
     text-align: center;
     height: clamp(65vh, 25vh + 5vw, 100vh);
-    cursor: none;
+    z-index: 1;
 }
 .header-bg-video {
     position: absolute;
@@ -23,6 +23,7 @@ header {
     left: 0;
     width: 100%;
     z-index: -1;
+    cursor: none;
 }
 .logo {
     font-size: 1.2rem;
@@ -37,6 +38,49 @@ header {
     opacity: 0.9;
     transition: all 0.2s ease;
 }
+.overlay{
+    z-index: 2;
+    display: none;
+    padding-top: 2.25%;
+    background-color: #242423;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+    color: antiquewhite;
+}
+.overlay .cards-hz {
+    margin: 5%;
+}
+.overlay .brand-card:nth-child(odd) {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+.overlay .brand-card {
+    padding: 0 5%;
+}
+.overlay .brand-card h5::after {
+    display: none;
+}
+.overlay img {
+    width: 275px;
+    padding-bottom: 25px;
+}
+.overlay .cards-hz::-webkit-scrollbar {
+    display: none;
+}
+.overlay-text {
+    display: flex;
+    justify-content: space-between;
+}
+.overlay-text p, .overlay-card p, .overlay-card h5 {
+    color: antiquewhite;
+    font-size: 0.8rem;
+}
+
+
 
 /* Animation Attempt Towards Nav Underline
 .nav-list-items:hover {
@@ -286,7 +330,7 @@ footer ul {
 }
 
 @media (max-width:586px) {
-    .mouse-circle,.nav-links-two,.brand-card p ,.drag-circle,.fa-arrow-alt-circle-right,.footer-links {
+    .mouse-circle,.nav-links-two,.brand-card p ,.drag-circle,.fa-arrow-alt-circle-right,.footer-links,.icon {
         display: none;
     }
     header {

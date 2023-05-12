@@ -127,3 +127,13 @@ card.addEventListener('mouseleave', function () {
   drag.style.left = dragDefault.left; 
   drag.style.top =  dragDefault.top;
 });
+
+const openBtn = document.querySelector('.open-btn');
+const closeBtn = document.querySelector('.close-btn');
+
+openBtn.addEventListener('click', function() {
+  document.querySelector('.overlay').style.display = 'block';
+});
+closeBtn.addEventListener('click', function() { 
+  document.querySelector('.overlay').style.display = 'none';
+});
