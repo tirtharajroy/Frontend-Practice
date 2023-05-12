@@ -54,6 +54,10 @@ hr {
     height: 1.6em;
     width: 3.6em;
     margin: 0 1.2em;
+    z-index: 2;
+}
+.nav_container {
+    position: relative; /* Add position relative to contain nav_one and nav_two */
 }
 .nav_bar {
     display: flex;
@@ -70,6 +74,7 @@ hr {
 .nav_one {
     display: flex;
     flex: 1;
+    z-index: 2;
 }
 .more_btn {
     flex: 1;
@@ -77,9 +82,23 @@ hr {
 
 /* Secondary Nav Bar */
 .nav_two {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
     height: 3rem;
-    padding: 0.8rem;
+    padding: 1.28rem;
+    background-color: #FAF9F6;
+    z-index: 1;
+    transition: transform 0.2s ease-in-out;
 }
+  
+.nav_two.fixed {
+    position: fixed;
+    top: 0;
+    background-color: #FAF9F6;
+}
+  
 .nav_two li a{
     font-weight: bold;
     font-size: 0.8rem;
@@ -221,7 +240,7 @@ hr {
 }
 .jobs div, .jobs img {
     width: 50%;
-
+    min-height: 440px;
 }
 .jobs div {
     display: flex;
@@ -231,7 +250,7 @@ hr {
 .jobs p {
     padding: 3rem 3rem 0 3rem;
 }
-.jobs div, .jobs p, .jobs a {
+.jobs div, .jobs p, .jobs a,.gt-span {
     background-color: #B1C4FE;
 }
 
@@ -318,7 +337,7 @@ input[type="submit"] {
 
 /* Responsive Design */
 @media (max-width: 747px) {
-    .pics-one,.jobs,.pics-two, .login_btn, .live_btn {
+    .pics-one,.jobs,.pics-two, .login_btn, .live_btn, .nav_two.fixed {
         display: none !important;
     }
     .ft-legal-items {
@@ -356,5 +375,10 @@ input[type="submit"] {
     }
     .margin-left-four {
         margin-left: 1.8rem !important;
+    }
+}
+@media (max-width: 1020px) {
+    .gt-span {
+        display: none;
     }
 }

@@ -28,3 +28,28 @@ function toggleTwo () {
 
 nam.addEventListener("click",toggle);
 tog.addEventListener("click",toggleTwo);
+
+// Get the nav_one and nav_two elements
+const navOne = document.querySelector('.nav_one');
+const navTwo = document.querySelector('.nav_two');
+
+// Store the previous scroll position
+let prevScrollPos = window.pageYOffset;
+
+// Listen for scroll events
+window.addEventListener('scroll', () => {
+  // Get the current scroll position
+  const currentScrollPos = window.pageYOffset;
+
+  // Check if the user has scrolled up or down
+  if (prevScrollPos > currentScrollPos) {
+    // User has scrolled up, fix the nav_two element
+    navTwo.classList.add('fixed');
+  } else {
+    // User has scrolled down, unfix the nav_two element
+    navTwo.classList.remove('fixed');
+  }
+
+  // Update the previous scroll position
+  prevScrollPos = currentScrollPos;
+});
