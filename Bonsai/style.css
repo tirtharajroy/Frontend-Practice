@@ -2,11 +2,151 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 
 /* Universal */
- * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
-    list-style: none;
- }
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 18px;
+   font-family: 'Montserrat', sans-serif;
+   scroll-behavior: smooth;
+   list-style: none;
+   background-color: #FFFEFE;
+}
+:root {
+   --color-add: #00b289;
+}
+body::-webkit-scrollbar {
+   display: none;
+}
+
+/* Utility Classes */
+.container-fluid {
+   width: 100%;
+   max-width: 100%;
+   padding: 1.2rem;
+   margin: 0 auto;
+}
+.container {
+   width: 100%;
+   max-width: 1000px;
+   padding: 0 1.2rem;
+   margin: 0 auto;
+}
+.flex-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.flex-align-center {
+   display: flex;
+   align-items: center;
+}
+.flex-row {
+   display: flex;
+   flex-direction: row;
+}
+.flex-column {
+   display: flex;
+   flex-direction: column;
+}
+.flex-wrap {
+   flex-wrap: wrap;
+}
+.flex-between {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.clr-og {
+   color: var(--color-add);
+}
+
+
+/* Header */
+header {
+   min-height: 4.6rem;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: #fff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+nav {
+   width: 100%;
+   background-color: #fff;
+}
+nav ul {
+   display: flex;
+   align-items: center;
+   background-color: #fff;
+   padding: 0 1.2rem;
+}
+nav ul li {
+   background-color: #fff;
+}
+.nav-links {
+   margin: 0 1rem;
+   text-decoration: none;
+   font-weight: bold;
+   color: darkslategray;
+   font-size: 0.8rem;
+   background-color: #fff;
+}
+.nav-links:hover {
+   color: #000;
+}
+.nav-links span {
+   font-size: 0.68rem;
+   background-color: #fff;
+}
+.nav-icon {
+   display: none;
+}
+.btn {
+   border: 2px solid var(--color-add);
+   border-radius: 5px;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 0.68rem;
+   font-weight: bold;
+}
+.btn-one {
+   color: var(--color-add);
+   background-color: #fff;
+   margin-right: 0.4rem;
+   padding: 0.4rem 0.8rem;
+}
+.btn-two {
+   color: #fff;
+   background-color: var(--color-add);
+   padding: 0.4rem 1rem;
+}
+
+/* Main */
+.main-section {
+   margin-top: 4.6rem;
+}
+
+/* Cards Intro Section */
+.cards-intro {
+   margin: 8rem 0 2rem;
+}
+.cards-intro > p {
+   font-size: 1.4rem;
+   font-weight: bold;
+   margin-bottom: 1.2rem;
+}
+.toggle-container > p {
+   font-size: 0.67rem;
+   font-weight: bold;
+   padding-bottom: 0.6rem;
+   text-align: right;
+}
+.toggle-section * + * {
+   margin-left: 1.2rem;
+}
+.toggle-section > p {
+   font-size: 0.8rem;
+   font-weight: bold;
+}

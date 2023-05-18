@@ -4,41 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <script defer src="index.js"></script>
     <title>Bonsai</title>
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="container-fluid flex-align-center">
+        <nav class="flex-between">
             <div class="logo">
                 <img src="images/logo.svg" alt="Logo Image">
             </div>
             <ul>
-                <li><a href="#">Product &blacktriangledown;</a></li>
-                <li><a href="#">Templates &blacktriangledown;</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Reviews</a></li>
+                <li><a class="nav-links" href="#">Product &nbsp;<span>&or;</span></a></li>
+                <li><a class="nav-links" href="#">Templates &nbsp;<span>&or;</span></a></li>
+                <li><a class="nav-links" href="#">Pricing</a></li>
+                <li><a class="nav-links" href="#">Reviews</a></li>
             </ul>
             <ul>
                 <li><a href="#" class="btn btn-one">Log In</a></li>
                 <li><a href="#" class="btn btn-two">Start Free</a></li>
             </ul>
+            <i class="fa fa-ellipsis-h nav-icon"></i>
         </nav>
     </header>
-    <main>
+    <main class="container main-section">
         <section class="cards">
-            <div class="cards-intro">
+            <div class="cards-intro flex-between flex-wrap">
                 <p>Plans and Pricing</p>
                 <div class="toggle-container">
-                    <p>2 MONTHS FREE!</p>
-                    <div class="toggle-section">
-                        <h5>MONTHLY</h5>
+                    <p class="clr-og">2 MONTHS FREE!</p>
+                    <div class="toggle-section flex-row">
+                        <p>MONTHLY</p>
                         <label for="slider" class="switch">
                             <input type="checkbox" id="slider">
                             <span class="slider"></span>
                         </label>
-                        <h5>YEARLY</h5>
+                        <p class="clr-og">YEARLY</p>
                     </div>
                 </div>
             </div>
