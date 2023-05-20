@@ -17,8 +17,23 @@
                 <img src="images/logo.svg" alt="Logo Image">
             </div>
             <ul>
-                <li><a class="nav-links" href="#">Product &nbsp;<span>&or;</span></a></li>
-                <li><a class="nav-links" href="#">Templates &nbsp;<span>&or;</span></a></li>
+                <li class="contains-submenu" onclick="open1()">
+                    <a class="nav-links" tabindex="0">Product &nbsp;<span>&or;</span></a>
+                    <ul class="submenu flex-column">
+                        <li><a href="#">Client</a></li>
+                        <li><a href="#">Project</a></li>
+                        <li><a href="#">Financial</a></li>
+                    </ul>
+                </li>
+                <li class="contains-submenu" onclick="open2()">
+                    <a class="nav-links" href="#">Templates &nbsp;<span>&or;</span></a>
+                    <ul class="submenu flex-column">
+                        <li><a href="#">Contract</a></li>
+                        <li><a href="#">Proposal</a></li>
+                        <li><a href="#">Invoice</a></li>
+                        <li><a href="#">Quote</a></li>
+                    </ul>
+                </li>
                 <li><a class="nav-links" href="#">Pricing</a></li>
                 <li><a class="nav-links" href="#">Reviews</a></li>
             </ul>
@@ -37,10 +52,10 @@
                     <p class="clr-og">2 MONTHS FREE!</p>
                     <div class="toggle-section flex-row">
                         <p>MONTHLY</p>
-                        <label for="slider" class="switch">
-                            <input type="checkbox" id="slider">
-                            <span class="slider"></span>
-                        </label>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
                         <p class="clr-og">YEARLY</p>
                     </div>
                 </div>
