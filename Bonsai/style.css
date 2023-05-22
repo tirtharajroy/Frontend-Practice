@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;450;700&display=swap');
 
 /* Universal */
 * {
@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
 .container {
    width: 100%;
    max-width: 1000px;
-   padding: 0 1.2rem;
+   padding: 0 1.4rem;
    margin: 0 auto;
 }
 .flex-center {
@@ -173,7 +173,7 @@ nav ul li {
 
 /* Cards Intro Section */
 .cards-intro {
-   margin: 8rem 0 2rem;
+   margin: 9.2rem 0 2rem;
 }
 .cards-intro > p {
    font-size: 1.4rem;
@@ -252,11 +252,98 @@ input:checked + .slider:before {
 }
 
 /* Cards Section */
-
-
-
-
-
+.cards-container {
+   justify-content: center;
+   gap: 4%;
+   margin-bottom: 4rem;
+}
+.card {
+   margin-top: 1.2rem;
+   padding: 3.6rem;
+   background-color: #fff;
+   border: 2px solid #e6e4e4;
+   border-radius: 5px;
+   box-shadow: 0 0 1.2px rgba(0, 0, 0, 0.12);
+   width: 48%;
+}
+.price-section {
+   padding: 0.8rem 0 1.4rem;
+   font-size: 4rem;
+   font-weight: bold;
+   color: rgb(37, 56, 56);
+   border-bottom: 2px solid var(--color-add);
+}
+.price-section sub, .price-section sup {
+   font-size: 1.6rem;
+   font-weight: normal;
+}
+.card > h2 {
+   font-size: 1.6rem;
+   font-weight: 450;
+}
+.card ul {
+   padding: 2rem 0;
+}
+.card ul * + *{
+   margin-top: 0.8rem;
+}
+.icon i {
+   font-size: 0.7rem;
+   color: var(--color-add);
+}
+.list-name {
+   font-size: 0.74rem;
+   color: darkslategray;
+}
+.card:nth-child(2) ul li:nth-last-child(6) {
+   position: relative;
+}
+.card:nth-child(2) ul li:nth-last-child(6)::after {
+   content: 'NEW';
+   position: absolute;
+   top: 28%;
+   transform: translateX(5px);
+   font-size: 0.5rem;
+   font-weight: bold;
+   color: #fff;
+   background-color: rgba(201, 201, 17, 0.925);
+   padding: 0.1rem;
+   border-radius: 2px;
+}
+.card-btn {
+   width: 100%;
+   padding: 0.6rem;
+   cursor: pointer;
+   font-size: 0.8rem;
+   font-weight: bold;
+   color: #fff;
+   background-color: var(--color-add);
+   border: 1px solid var(--color-add);
+   border-radius: 4.2px;
+}
+.card-btn:hover {
+   background-color: #fff;
+   color: var(--color-add);
+   transition: all 0.25s ease-in-out;
+}
+.card:nth-child(2) {
+   position: relative;
+   overflow: hidden;
+}
+.card:nth-child(2)::before {
+   content: 'MOST POPULAR';
+   position: absolute;
+   font-weight: bold;
+   font-size: 0.9rem;
+   color: #fff;
+   background-color: var(--color-add); 
+   padding: 0.4rem;
+   text-align: center;
+   transform: rotateZ(45deg);
+   top: 8%;
+   right: -20%;
+   width: 70%;
+}
 
 
 
@@ -278,6 +365,10 @@ input:checked + .slider:before {
    .nav-icon {
       display: inline-block;
       order: 3;
+   }
+   .cards-intro {
+      justify-content: center;
+      flex-direction: column;
    }
    .logo {
       order: 1;
@@ -305,6 +396,9 @@ input:checked + .slider:before {
       opacity: 1;
       visibility: visible;
       margin-top: 5px;
+   }
+   .card {
+      width: min(400px, 80vw);
    }
 }
 
@@ -346,6 +440,21 @@ input:checked + .slider:before {
       display: none;
    }
    .submenu {
-      display: none !important;
+      display: none ;
+   }
+   .card {
+      padding: 1.2rem;
+   }
+   .card > h2 {
+      font-size: 1.4rem;
+   }
+   .card ul {
+      padding: 1.2rem 0;
+   }
+   .card ul * + * {
+      margin-top: 0.4rem;
+   }
+   .card:nth-child(2)::before {
+      display: none;
    }
 }

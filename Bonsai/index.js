@@ -12,10 +12,8 @@ navBtn.addEventListener('click', () => {
     else {
         navBtn.classList.remove('fa-times');
         navBtn.classList.add('fa-ellipsis-h');
-        navOne.style.display = 'none';
-        if (document.documentElement.clientWidth < 512) {
-            navTwo.style.display = 'none';
-        }
+        navOne.style.display = '';
+        navTwo.style.display = '';
     }
 });
 
