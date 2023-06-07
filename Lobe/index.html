@@ -1,14 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />
     <title>Lobe</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <div class="navbar flex-between flex-wrap">
+        <div class="logo">
+          <a href="#"><img src="images/logo.png" alt="Logo" /></a>
+        </div>
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Examples</a></li>
+          <li><a href="#" aria-selected="true">Tour</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <a href="#" class="action-btn">Download</a>
+      </div>
+    </header>
+    <main class="container">
+      <div class="tour-para">
+        <h1>Lobe <span>Tour</span></h1>
+        <p>
+          Build your first machine learning model in ten minutes. No code or
+          experience required.
+        </p>
+      </div>
+      <img src="images/video.jpg" alt="Video Preview Image" />
+      <p class="train-heading">Train your app with Lobe</p>
+      <div class="down-btn">
+        <a href="#">Download</a>
+      </div>
+      <hr />
+    </main>
+    <footer class="container">
+      <section class="ft-main container">
+        <div class="ft-main-items">
+          <img src="images/logo.png" alt="Logo Image" />
+          <ul>
+            <li><a href="#">A product by Microsoft.</a></li>
+            <li><a href="#">All rights reserved.</a></li>
+            <li><a href="#">© Microsoft 2021</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-items">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">Download</a></li>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Examples</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-items">
+          <h3>General</h3>
+          <ul>
+            <li><a href="#">Notice</a></li>
+            <li><a href="#">License</a></li>
+            <li><a href="#">Press Inquiry</a></li>
+            <li><a href="#">Press Images</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-items">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Tour</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-items">
+          <div class="icon">
+            <i class="fa-regular fa-comment"></i>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>

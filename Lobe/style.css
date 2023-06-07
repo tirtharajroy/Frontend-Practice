@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 
 /* Universal */
 * {
@@ -14,9 +14,9 @@
 body::-webkit-scrollbar {
   display: none;
 }
+/* Utility Classes */
 .container {
-  width: 100%;
-  max-width: 960px;
+  width: min(100%, 960px);
   padding: 0 1.4rem;
   margin: 0 auto;
 }
@@ -40,4 +40,231 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* Styling Navbar Section */
+header {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #fff; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.12rem 2.8rem;
+  z-index: 1;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+.navbar li {
+  background: transparent;
+}
+.logo img {
+  width: 100px;
+}
+.navbar li a {
+  text-decoration: none;
+  color: #606161;
+  font-size: 0.96rem;
+  transition: all 0.3s ease-in-out;
+  margin: 0 1.12rem;
+  background: transparent;
+}
+.navbar li a[aria-selected="true"] {
+  color: #000;
+}
+.navbar li:hover {
+  transform: scale(1.1);
+}
+.navbar li a:hover {
+  color: #000;
+}
+.action-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #04DDB2;
+  font-weight: bold;
+  font-size: 0.98rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 45px;
+  transition: all 0.2s ease-in-out;
+}
+.action-btn:hover {
+  transform: scale(1.05);
+}
+.hamburger {
+  background-color: #00000041;
+  border-radius: 40px;
+  padding: 0.8rem 0.96rem;
+  cursor: pointer;
+  display: none;
+}
+.hamburger i {
+  color: #fff;
+  font-size: 1.12rem;
+}
+
+/* Styling Main Section */
+.tour-para {
+  margin-top: 9.2rem;
+  text-align: center;
+}
+.tour-para h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 1.12rem;
+}
+.tour-para span {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #04DDB2;
+}
+.tour-para p {
+  color: #333333;
+  font-size: 1.36rem;
+  max-width: 36ch;
+  margin: 0 auto;
+}
+
+main img {
+  width: 100%;
+  margin: 3.6rem 0;
+  border-radius: 40px; 
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+main img:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.train-heading {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #333333;
+  padding-bottom: 2.12rem;
+  max-width: 12ch;
+  margin: 0 auto;
+  text-align: center;
+}
+.down-btn {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.down-btn a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #04DDB2;
+  font-weight: bold;
+  font-size: 0.98rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 45px;
+  transition: all 0.2s ease-in-out;
+}
+.down-btn a:hover {
+  font-size: 1.2rem;
+  padding: 0.96rem 1.54rem;
+}
+
+hr {
+  width: 100%;
+  margin: 4rem 0;
+  border: 1px solid #04ddb2bd;
+
+}
+
+/* Styling Footer Section */
+.ft-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(152px,1fr));
+  gap: 1.2rem;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+.ft-main-items {
+  text-align: center;
+  margin: 1.12rem 0;
+}
+.ft-main-items img {
+  width: 80px;
+  margin-top: -0.6rem;
+}
+.ft-main-items * + * {
+  margin-top: 0.6rem;
+}
+.ft-main h3 {
+  color: #253838;
+  font-size: 0.96rem;
+  margin-bottom: 1.6rem;
+}
+.ft-main a {
+  color: #253838;
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+.ft-main li {
+  transition: 0.2s ease-in-out;
+}
+.ft-main li:hover {
+  transform: scale(1.05);
+}
+.ft-main-items i {
+  color: #fff;
+  padding: 0.4em;
+}
+.ft-main-items .icon {
+  display: inline-block;
+  background-color: #04DDB2;
+  border-radius: 50%;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+
+
+
+
+/* Media Quaries */
+@media (width < 1060px) {
+  header {
+    padding: 1.12rem 1.4rem;
+  }
+  .navbar li a {
+    margin: 0 0.6rem;
+  }
+}
+@media (width < 767px) {
+  .hamburger {
+    display: inline-block;
+  }
+  .navbar ul {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 1.2rem 0;
+  }
+  .navbar ul * + * {
+    margin-top: 1.12rem;
+  }
+  .action-btn {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    text-align: center;
+  }
+  .navbar ul, .action-btn {
+    display: none;
+  }
+  .tour-para {
+    margin-top: 7.2rem;
+  }
+  .tour-para h1, .tour-para span {
+    font-size: 3rem;
+  }
+  .train-heading {
+    font-size: 2.8rem;
+  }
+  .tour-para p {
+    font-size: 1.12rem;
+  }
 }
