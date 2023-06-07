@@ -1,0 +1,116 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Geologica:wght@800&family=Montserrat:wght@400;800&display=swap');
+
+/* Universal */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-size: 18px;
+}
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 960px;
+  padding: 0 1.4rem;
+  margin: 0 auto;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Designing Hero Bg Section */
+.hero-bg{
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/music-image.webp) no-repeat 75% 50%/cover;
+    height: 100vh;
+    /* Add a box shadow to the bottom */
+    box-shadow: inset 0 -4rem 4rem rgba(0, 0, 0, 0.733);
+}
+.hero-bg .container {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 6%;
+}
+.hero-bg img {
+    width: min(400px, 90%);
+    margin-right: 10%;
+}
+.intro {
+    width: min(400px, 90%);
+    padding-bottom: 10%;
+}
+.intro p:nth-child(1) {
+    font-size: 2.6rem;
+    font-family: "Bungee Outline", sans-serif;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.intro p:nth-child(2) {
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Geologica', serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: -1.12rem;
+    margin-bottom: 2rem;
+}
+.hero-btn {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-right: 0.8rem;
+}
+.hero-btn i {
+    padding-right: 0.3rem;
+}
+.listen-btn {
+    padding: 0.8rem 1.8rem;
+    background-color: #50A485;
+}
+.share-btn {
+    background-color: transparent;
+    border: 1.2px solid #fff;
+    padding: 0.8rem 1.12rem;
+}
+/* Styling Nav Section */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+.nav img {
+    width: 2.6rem;
+}
+.nav i {
+    color: #fff;
+}
