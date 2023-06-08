@@ -1,0 +1,154 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@450;700&display=swap");
+
+/* Universal */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  font-size: 18px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --clr-og : #01AD6B;
+}
+
+/* Utility Classes */
+.container {
+  width: min(100%, 1160px);
+  padding: 0 1.4rem;
+  margin: 0 auto;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  padding-top: 2.4rem;
+  background-color: #EBFBF1;
+}
+.hamburger {
+  color: var(--clr-og);
+  display: none;
+}
+.navbar ul {
+  gap: 2rem;
+}
+.navbar ul li a {
+  color: var(--clr-og);
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+.navbar ul li a[aria-selected = "true"] {
+  color: #000;
+}
+.navbar ul li a:hover:not(.navbar ul li:nth-last-child(1) a) {
+  color: #000;
+}
+.navbar ul li:nth-last-child(1) a {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.8rem 0.4rem;
+  border: 2px solid var(--clr-og);
+}
+.navbar ul li:nth-last-child(1):hover{
+  transform: translate(5px, -5px);
+}
+.navbar ul li:nth-last-child(1):hover a{
+  box-shadow: -5px 5px 0 var(--clr-og);
+}
+
+/* Styling Hero Section */
+.hero-bg {
+  background-color: #EBFBF1;
+}
+.intro-para {
+  padding: 4rem 0;
+}
+.intro-para h1 {
+  font-size: 3.4rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 15ch;
+  margin-bottom: 1.2rem;
+}
+.intro-para p{
+  line-height: 1.6;
+  max-width: 50ch;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Quaries */
+@media (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .navbar ul {
+    display: none;
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .navbar ul * + * {
+    margin-top: 2.4rem;
+  }
+  .navbar ul li{
+    text-align: center;
+  }
+  .navbar ul li a {
+    font-size: 1.36rem;
+  }
+  .navbar ul li:nth-last-child(1) {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 2.4rem;
+  }
+  .navbar ul li:nth-last-child(1) a {
+    font-size: 1.4rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
