@@ -8,7 +8,6 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-  list-style: none;
   font-size: 18px;
 }
 body::-webkit-scrollbar {
@@ -57,6 +56,7 @@ header {
 }
 .navbar ul {
   gap: 2rem;
+  list-style: none;
 }
 .navbar ul li a {
   color: var(--clr-og);
@@ -104,6 +104,61 @@ header {
   margin: 0 auto;
 }
 
+/* Styling Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+/* Card 1 Styling */
+.card-one h4 {
+  line-height: 1.2;
+  max-width: 21ch;
+  padding-bottom: 1.2rem;
+  font-size: 1.12rem;
+  color: var(--clr-og);
+}
+.card-one ul {
+  list-style: inside;
+  list-style-position: outside;
+  padding: 0 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.card-one ul li {
+  font-size: 0.9rem;
+  color: #333;
+  max-width: 22ch;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+.card-one p, .card-one h5 {
+  font-size: 0.86rem;
+  color: #333;
+}
+.card-one h5 a {
+  font-size: 0.86rem;
+  color: #000;
+}
+
+/* Card 2 Styling */
+.card-two {
+  padding: 0 2rem 2rem 2rem;
+  border: 1px solid var(--clr-og);
+  border-radius: 5px 5px 0 0;
+}
+.recommended {
+  font-size: 0.66rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 0.4rem 0;
+  margin: 0 -2rem;
+  background-color: var(--clr-og);
+  border-radius: 5px 5px 0 0;
+}
 
 
 
@@ -123,6 +178,12 @@ header {
 
 
 /* Media Quaries */
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: inline-block;
