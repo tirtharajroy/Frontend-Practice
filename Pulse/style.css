@@ -86,6 +86,7 @@ header {
 /* Styling Hero Section */
 .hero-bg {
   background-color: #EBFBF1;
+  border-bottom: 1.5px solid #D7DAE4;
 }
 .intro-para {
   padding: 4rem 0;
@@ -143,11 +144,18 @@ header {
   color: #000;
 }
 
-/* Card 2 Styling */
+/* Card Two and Three Styling */
 .card-two {
   padding: 0 2rem 2rem 2rem;
   border: 1px solid var(--clr-og);
-  border-radius: 5px 5px 0 0;
+  border-radius: 8px 8px 0 0;
+  background-color: #fff;
+}
+.card-three {
+  padding: 0 2rem 2rem 2rem;
+  background-color: #fff;
+  border: 1.5px solid #D7DAE4;
+  border-left: 0;
 }
 .recommended {
   font-size: 0.66rem;
@@ -157,30 +165,269 @@ header {
   padding: 0.4rem 0;
   margin: 0 -2rem;
   background-color: var(--clr-og);
-  border-radius: 5px 5px 0 0;
+  border-radius: 8px 8px 0 0;
+}
+.card-two h1 {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--clr-og);
+  margin-top: 2.4rem;
+}
+.pricing {
+  font-size: 1.32rem;
+  color: #333;
+  text-align: center;
+  margin: 0.6rem 0;
+}
+.action-btn {
+  margin: 2.2rem 0 2.6rem;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+}
+.action-btn a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #1FE275;
+  padding: 0.8rem 2.24rem;
+}
+.action-btn a:hover {
+  color: #000;
+}
+.action-btn:hover {
+  transform: scale(1.08);
+}
+.benefits-heading {
+  font-size: 0.72rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+.card-two ul, .card-three ul {
+  list-style: none;
+  margin-left: -0.8rem;
+  margin-right: -0.8rem;
+}
+.card-two li , .card-three li {
+  display: flex;
+  gap: 0.4rem;
+}
+.card-two li * + * , .card-three li * + *{
+  margin-top: 0.6rem;
+}
+.card-two i, .card-three i {
+  font-size: 0.8rem;
+  color: var(--clr-og);
+  padding-top: 1.28rem;
+}
+.card-two li p , .card-three li p {
+  font-size: 0.86rem;
+  color: #000;
+  line-height: 1.5;
+}
+.card-three h2 {
+  text-align: center;
+  color: var(--clr-og);
+  font-size: 2rem;
+  font-weight: 350;
+  line-height: 1.1;
+}
+.intro-card-three {
+  margin-bottom: 1.2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  font-size: 0.74rem;
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #F2F3F3;
+  border-bottom: 1.5px solid #D7DAE4;
 }
 
+/* Styling Quote Section */
+.quote-para {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.quote-para p {
+  margin: 1.2rem auto;
+  color: #000;
+  font-size: 1.32rem;
+  line-height: 1.5;
+  max-width: 52ch;
+}
+.quote-para h4 {
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: var(--clr-og);
+  margin: 1.2rem 0;
+}
 
+/* Styling FAQ Section */
+.faq {
+  padding: 6rem 1.6rem;
+}
+.faq h1 {
+  font-size: 2.44rem;
+  margin-bottom: 2rem;
+}
+.faq-cards {
+  display: grid;
+  --col-count: 2;
+  grid-template-columns: repeat(var(--col-count), 1fr);
+  gap: 2rem;
+}
+.faq-cards h2 {
+  font-size: 1.06rem;
+}
+.faq-cards p {
+  margin-top: 0.22rem;
+  font-size: 0.92rem;
+  color: #333;
+  line-height: 1.4;
+}
 
+/* Styling Footer Section */
+footer {
+  background-color: #090D16;
+  padding: 4rem 0;
+}
+/* Footer Main Section */
+.ft-main {
+  display: grid;
+  grid-template-columns: 420px repeat(auto-fill,minmax(125px,1fr));
+  gap: 1.6rem;
+  justify-content: center;
+}
+.ft-main-items {
+  text-align: center;
+  margin: 1.12rem 0;
+}
+.ft-main-items * + * {
+  margin-top: 0.6rem;
+}
+.ft-main-items ul {
+  list-style: none;
+}
+.ft-main h3 {
+  color: whitesmoke;
+  font-size: 0.86rem;
+  margin-bottom: 2rem;
+}
+.ft-main a {
+  color: #1FE275;
+  font-size: 0.86rem;
+  text-decoration: none;
+}
+.ft-main a:hover {
+  color: #fff;
+}
 
+.ft-main-items img {
+  width: 160px;
+  float: left;
+  margin-left: 4rem;
+}
+.sign-up-btn {
+  margin-top: 6.6rem;
+  margin-left: 4rem;
+  text-align: left;
+  clear: both;
+}
+.sign-up-btn a{
+  color: #333;
+  padding: 0.9rem 1.2rem;
+  background: linear-gradient(90deg, #00AC6C, #24E976);
+  font-weight: bold;
+  transition: color 0.25s ease-in-out;
+}
+.sign-up-btn a:hover {
+  color: #000;
+}
+.sign-up-btn:hover {
+  transform: translate(5px, -5px);
+}
+.sign-up-btn:hover a {
+  box-shadow: -5px 5px 0 #585555;
+}
 
+/* Footer Legal Section */
+.ft-legal {
+  margin: 4rem 1.6rem -2.4rem;
+}
+.ft-legal p, .ft-legal a {
+  color: whitesmoke;
+  font-size: 0.64rem;
+  margin-bottom: 0.26rem;
+}
+.ft-legal a:hover {
+  color: yellowgreen;
+}
 
-
-
-
-
-
-
-
-
-
-
+/* Contact Button */
+.contact-btn a {
+  padding: 0.5rem 0.7rem;
+  border: 2px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--clr-og); 
+  text-transform: uppercase;
+  font-size: 0.86rem;
+  font-weight: bold;
+}
+.contact-btn a:hover {
+  color: #333;
+}
 
 
 /* Media Quaries */
 @media (max-width: 992px) {
   .cards {
     grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+  .cards * + * {
+    margin-top: 2rem;
+  }
+  .card-one h4, .card-one ul li {
+    max-width: unset;
+  }
+  .card-one h4 {
+    padding-bottom: 0;
+  }
+  .card-one h5 {
+    margin-top: 0.6rem;
+    margin-bottom: 1.6rem;
+  }
+  .card-two li * + * , .card-three li * + *{
+    margin-top: -0.2rem;
+  }
+  .card-two i, .card-three i {
+    padding-top: 0.5rem;
+  }
+  .card-three {
+    border-left: 1.5px solid #D7DAE4;
+  }
+  .intro-para h1 {
+    font-size: 2.4rem;
+  }
+  .intro-para p {
+    font-size: 0.96rem;
+  }
+  .ft-main {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 210px);
+    place-items: center;
+  }
+  .ft-main-items:nth-child(1) {
+    grid-column: 1 / -1;
+  }
+  .sign-up-btn {
+    text-align: center;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
   }
 }
 
@@ -189,16 +436,27 @@ header {
     display: inline-block;
     cursor: pointer;
   }
+  header {
+    background-color: #fff;
+    height: 7rem;
+    border-bottom: 1.5px solid #D7DAE4;
+  }
   .navbar ul {
     display: none;
     width: 100%;
     margin-top: 2rem;
-  }
-  .navbar ul * + * {
-    margin-top: 2.4rem;
+    position: absolute;
+    top: 5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-left: -1.42rem;
+    height: calc(100vh - 7rem);
   }
   .navbar ul li{
+    margin-top: 2.4rem;
     text-align: center;
+  }
+  .navbar ul li:nth-last-child(1) {
+    padding-bottom: 2rem;
   }
   .navbar ul li a {
     font-size: 1.36rem;
@@ -211,5 +469,28 @@ header {
   .navbar ul li:nth-last-child(1) a {
     font-size: 1.4rem;
     padding: 0.6rem 1.2rem;
+  }
+  .faq-cards {
+    --col-count : 1;
+  }
+  .faq-cards * + * {
+    margin-top: 1.2rem;
+  }
+  .intro-para {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .intro-para h1 {
+    text-align: left;
+    max-width: unset;
+    margin: -2rem 1.2rem 2.6rem 1.2rem;
+  }
+  .intro-para p {
+    text-align: left;
+    max-width: unset;
+    margin: 0 1.2rem 3.6rem 1.2rem;
+  }
+  .ft-main {
+    grid-template-columns: repeat(auto-fill, 350px);
   }
 }
