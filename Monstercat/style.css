@@ -11,6 +11,7 @@
   list-style: none;
   font-size: 18px;
 }
+
 /* Utility Classes */
 .container {
   width: 100%;
@@ -46,7 +47,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(images/music-image.webp) no-repeat 75% 50% / cover;
   height: 100vh;
-  box-shadow: inset 0 -4rem 4rem rgba(0, 0, 0, 0.733);
+  box-shadow: inset 0 -4rem 2.6rem rgba(0, 0, 0, 0.733);
 }
 .hero-bg .container {
   backdrop-filter: blur(5px);
@@ -107,7 +108,7 @@
 }
 .listen-btn {
   padding: 0.8rem 1.8rem;
-  background-color: #50a485;
+  background-color: #50A485;
 }
 .share-btn {
   background-color: transparent;
@@ -141,7 +142,7 @@
   position: fixed;
   top: 20%;
   right: 1.2rem;
-  gap: 0.6rem;
+  gap: 1.2rem;
 }
 .social i {
   color: rgba(255, 255, 255, 0.836);
@@ -159,4 +160,157 @@
   text-transform: uppercase;
   margin-top: 3.6rem;
   margin-bottom: 1.8rem;
+}
+
+/* Styling Stream Icons Section */
+.stream-icons div {
+  border: 2px solid #fff;
+  width: max-content;
+}
+.stream-icons i {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1.2rem;
+  border-right: 1.5px solid #fff;
+}
+
+.stream-icons .fa-solid span {
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: 'Geologica', serif;
+  padding-left: 0.24rem;
+}
+
+/* Styling the tooltip */
+.stream-icons div a {
+  position: relative;
+  text-decoration: none;
+}
+.tooltip {
+  position: absolute;
+  top: -2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  white-space: nowrap;
+  background-color: #fff;
+  font-size: 0.72rem;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+.tooltip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-60%);
+  border: 10px solid;
+  border-color: #fff #0000 #0000 #0000;
+}
+.stream-icons a:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Styling the Tracks Section */
+
+
+
+
+
+/* Styling the Footer Section */
+.ft-main {
+  margin: 6rem auto 2rem;
+}
+.ft-main > div{
+  gap: 2%;
+  padding: 3.12rem 0 2.6rem;
+  border-top: 1.2px solid #fff;
+  border-bottom: 1.2px solid #fff;
+  align-items: flex-start;
+}
+.links, .newsletter {
+  width: 32%;
+}
+.links a {
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Geologica', serif;
+}
+.links ul * + * {
+  padding-top: 0.2rem;
+}
+.newsletter h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #615d5d;
+  margin-bottom: 0.4rem;
+}
+.newsletter p {
+  font-style: italic;
+  font-size: 0.92rem;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+  padding: 0.4rem 0 1.2rem;
+}
+.newsletter input {
+  width: 100%;
+  padding: 0.8rem 0.4rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #615d5d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.92rem;
+  background-color: #100C0F;
+  margin-bottom: 0.4rem;
+  caret-color: #fff;
+}
+.newsletter form {
+  position: relative;
+}
+.newsletter i {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: whitesmoke;
+  padding: 0.8rem 1.2rem;
+  margin-right: -0.8rem;
+  margin-bottom: 0.4rem;
+  transition: all 0.25s ease-in-out;
+}
+.newsletter i:hover {
+  color: #333;
+  background-color: #fff;
+}
+
+/* Styling Footer Links Section */
+.ft-social {
+  margin-bottom: 4rem;
+}
+.ft-social p {
+  font-size: 0.84rem;
+  font-style: italic;
+  color: whitesmoke;
+}
+.ft-social i {
+  color: #fff;
+  padding-right: 0.6rem;
+}
+
+/* Styling Footer Legal Section */
+.ft-legal {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.ft-legal p {
+  font-size: 0.68rem;
+  font-style: italic;
+  color: whitesmoke;
+  padding-bottom: 1rem;
 }
