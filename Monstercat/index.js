@@ -1,5 +1,4 @@
 // Audio Player Function
-
 let audioActive = {
     element: null,
     audio: null
