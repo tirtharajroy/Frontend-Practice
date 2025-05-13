@@ -22,6 +22,18 @@ function playAudio(element, audioPath) {
         
         if (!audioActive.audio || audioActive.element !== element) {
             audioActive.audio = new Audio(audioPath);
+            // Handle when audio ends naturally
+            audioActive.audio.addEventListener('ended', function () {
+                if (audioActive.element) {
+                    audioActive.element.classList.remove('fa-pause');
+                    audioActive.element.classList.add('fa-play');
+                    audioActive.element.style.paddingRight = '';
+                }
+
+                // Clear state
+                audioActive.element = null;
+                audioActive.audio = null;
+            });
         }
         audioActive.audio.play();
         audioActive.element = element;
@@ -36,3 +48,4 @@ function playAudio(element, audioPath) {
         }
     }
 }
+
