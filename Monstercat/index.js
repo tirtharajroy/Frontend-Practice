@@ -49,3 +49,22 @@ function playAudio(element, audioPath) {
     }
 }
 
+
+// Overlay Function
+function overlay() {
+    let overlayElem = document.getElementsByClassName('overlay-menu')[0];
+    // let overlayOpen = document.getElementsByClassName('fa-bars')[0];
+    // let overlayClose = document.getElementsByClassName('fa-x')[0];
+
+    if (overlayElem.classList.contains('active')) {
+        overlayElem.classList.remove('active');
+    } else {
+        overlayElem.classList.add('active');
+    }
+    
+    // if (overlayElem.style.display == 'block') {
+    //     overlayElem.style.display = 'none';
+    // } else {
+    //     overlayElem.style.display = 'block';
+    // }
+}

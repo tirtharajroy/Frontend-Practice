@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
     <script type="text/javascript" src="index.js"></script>
     <title>Monstercat</title>
 </head>
@@ -31,7 +32,42 @@
         </div>
         <div class="nav">
             <img src="images/logo.webp" alt="Logo">
-            <i class="fa-solid fa-bars fa-xl"></i>
+            <i class="fa-solid fa-bars fa-xl" onclick="overlay()"></i>
+        </div>
+        <div class="overlay-menu">
+                <div class="nav-overlay">
+                    <img src="images/logo.webp">
+                    <h3>monstercat</h3>
+                    <i class="fa-solid fa-x fa-xl" onclick="overlay()"></i>
+                </div>
+                <ul>
+                    <li><a href="#">Music <span>&gt;</span></a></li>
+                    <li><a href="#">Artists</a></li>
+                    <li><a href="#">About <span>&gt;</span></a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Programming <span>&gt;</span></a></li>
+                    <li><a href="#">Gold</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Player <span>&gt;</span></a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Lost Civilization</a></li>
+                    <li><a href="#">Credits</a></li>
+                </ul>
+                <div class="overlay-menu-social">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-solid fa-headphones"></i></a>
+                </div>
+                <a href="#" class="sign-btn signin-btn">SIGN IN</a>
+                <a href="#" class="sign-btn signup-btn">OR SIGN UP</a>
         </div>
         <div class="social flex-column">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
