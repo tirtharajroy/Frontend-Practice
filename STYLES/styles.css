@@ -19,7 +19,7 @@ p::selection, h2::selection, h1::selection {
 
 /* Header */
 header {
-    background-image: url('images/trees-9296828_1280.jpg');
+    background-image: url('IMAGES/trees-9296828_1280.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -35,7 +35,7 @@ header h1 {
     font-size: 4rem;
     font-family: "Pacifico", cursive;
     text-align: center;
-    background-image:  url('images/winter-7639603_1280.jpg');
+    background-image:  url('IMAGES/winter-7639603_1280.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -204,7 +204,7 @@ main p:first-child {
 /* Footer */ 
 
 footer {
-    background-image: url('images/trees-9296828_1280.jpg');
+    background-image: url('IMAGES/trees-9296828_1280.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
