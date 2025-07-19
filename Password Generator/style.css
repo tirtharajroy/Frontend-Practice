@@ -1,5 +1,5 @@
 /* Import Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@450;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@450;700&family=Orbitron:wght@400..900&display=swap");
 
 /* Universal Styling*/
 * {
@@ -75,15 +75,33 @@ header h1 {
   margin: 0 1.2rem;
   border: 5px solid rgba(23, 116, 129, 0.753);
   border-radius: 9.5px;
-  font-size: 1.5rem;
-  padding: 5px;
+  font-size: 1.4rem;
+  padding: 5px 0 0 5px;
   color: white;
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   overflow-x: hidden;
   text-align: center;
+  height: 50px;
+  background-color: #421826;
 }
 
+.btns {
+  height: 94px;
+  background-color: #4a4a70;
+  border-radius: 2px 2px 7px 7px;
+  justify-content: space-around;
+  padding: 0 25px;
+}
+
+.btns button {
+  color: #FFF;
+  padding: 7.5px 25px;
+  border : 1px solid transparent;
+  border-radius: 15px;
+  background-color: #421826;
+  cursor: pointer;
+}
 
 
 /* Footer Section */
