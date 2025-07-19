@@ -41,6 +41,7 @@ body::-webkit-scrollbar {
   justify-content: space-between;
 }
 
+
 /* Header Section */
 header {
   background-color: #57a4ce;
@@ -50,6 +51,39 @@ header {
 header h1 {
   font-size: 1.5rem;
 }
+
+
+
+/* Main Section */
+
+.box {
+  height: 250px;
+  width: 450px;
+  border: 4px solid #57a4ce;
+  border-radius: 10px;
+}
+
+.display-screen {
+  width: 100%;
+  height: 150px;
+  background-color: #57a4ce;
+  border-radius: 5px 5px 0 0;
+}
+
+.display-screen p {
+  width: 100%;
+  margin: 0 1.2rem;
+  border: 5px solid rgba(23, 116, 129, 0.753);
+  border-radius: 9.5px;
+  font-size: 1.5rem;
+  padding: 5px;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  overflow-x: hidden;
+  text-align: center;
+}
+
 
 
 /* Footer Section */
